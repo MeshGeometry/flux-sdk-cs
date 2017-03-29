@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Flux.SDK, Version=2.2.17.0, Culture=neutral, PublicKeyToken=8e71cca13ad52f87, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Flux.SDK.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +74,16 @@
       <SubType>Designer</SubType>
       <LastGenOutput>PrimitivesResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Src\Flux.SDK\Flux.SDK.csproj">
+      <Project>{345649b5-ae74-4a52-a837-d03de809893f}</Project>
+      <Name>Flux.SDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Src\Flux.Serialization\Flux.Serialization.csproj">
+      <Project>{d505c7d3-076e-4657-996c-79e21a55249f}</Project>
+      <Name>Flux.Serialization</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
