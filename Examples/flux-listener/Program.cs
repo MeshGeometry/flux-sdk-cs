@@ -28,7 +28,7 @@ namespace flux_listener
 
 
                 System.IO.StreamReader reader = new System.IO.StreamReader(request.InputStream);
-                Console.WriteLine(reader.ReadToEnd());
+                ParseCommand(reader.ReadToEnd());
 
 
                 // Obtain a response object.
@@ -51,6 +51,13 @@ namespace flux_listener
             listener.Stop();
         }
 
+        static void ParseCommand(string rawCommand)
+        {
+
+            Console.WriteLine(rawCommand);
+
+
+        }
 
     }
 }
